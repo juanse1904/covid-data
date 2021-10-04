@@ -14,14 +14,7 @@ const Histogram = ({period, place, load}) => {
     const [options,setoptions]=useState({})
 
    const fetchData = async () => {
-      if(deaths.length>0){
-        dispatch(
-          {
-            type:'RESET_VALUES',
-            payload:[]
-          }
-        )
-      }
+
       await setLoading(true)
        switch(period){
             case 0:{
