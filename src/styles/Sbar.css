@@ -1,0 +1,82 @@
+.infobar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 70px;
+    width:80%;
+}
+
+.sbar{
+background-color: white;
+padding:5px;
+max-width: 470px;
+display: flex;
+border-radius: 4px;
+align-items: center;
+font-size: 12px;
+position: relative;
+box-shadow: 2px 3px 6px -1px rgba(153,148,153,1);
+}
+.sbar ul{
+  height: 300px; 
+  overflow: auto;
+}
+.sbar li:hover{
+  cursor: pointer;
+}
+.sbar>img{
+    transform: scale(0.5);
+    filter: invert(0.8);
+    margin:4px;
+
+}
+.sbar>input{
+    border: none;
+   }
+.sbar>input:focus{
+ outline: none;
+}
+
+.dropdown {
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 2px 3px 6px -1px rgba(153,148,153,1);
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  position: relative;
+  background: white;
+}
+.dropdown ul,.sbar ul {
+border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  display: none;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  background:white;
+  width: 100%;
+  z-index: 99;
+}
+.dropdown.open ul, .sbar.open ul{
+  display: block;
+}
+.dropdown ul li , .sbar ul li{
+  margin: 10px 0;
+}  
+
+@media  (max-width:600px){
+    .infobar{
+    flex-direction: column;
+    align-items: center;
+    }
+    #filter{
+        margin-top: 15px;
+        width:60%;
+    }
+}
