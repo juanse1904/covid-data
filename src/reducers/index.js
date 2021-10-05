@@ -34,7 +34,7 @@ const reducer = (state, action) => {
               
                 };
       case 'SET_DATE_LIST':
-          state.dates.unshift(action.payload?action.payload.date:0)
+          state.dates.unshift(action.payload?action.payload:0)
           let newDates=state.dates
         return{
             ...state,
